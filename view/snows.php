@@ -23,6 +23,7 @@ $rows=0; // Column count
                             <a href="view/content/images/<?= $snow['code']; ?>.jpg" target="blank"><img src="<?= $snow['photo']; ?>" alt="<?= $snow['code']; ?>" ></a>
                             <div class="caption">
                                 <h3><a href="index.php?action=snow&code=<?= $snow['code']; ?>"><?= $snow['code']; ?></a></h3>            <div class="yox-view">
+                                <h3><a href="index.php?action=snow&code=<?= $snow['code']; ?>"><?= $snow['code']; ?></a></h3>
                                 <p><strong>Marque : </strong><?= $snow['brand']; ?></p>
                                 <p><strong>Modèle : </strong><?= $snow['model']; ?></p>
                                 <p><strong>Longueur : </strong><?= $snow['snowLength']; ?> cm</p>
