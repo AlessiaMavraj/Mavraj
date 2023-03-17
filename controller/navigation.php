@@ -8,3 +8,8 @@ function home(){
 function lost(){
     require "view/lost.php";
 }
+
+function register(){
+
+    require "view/register.php";
+}
