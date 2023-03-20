@@ -67,7 +67,6 @@
                                 <li><a href="index.php?action=home">Home</a></li>
                                 <li><a href="index.php?action=snows">Snows</a></li>
                                 <li><a href="index.php?action=login">Login</a></li>
-                                <li><a href="index.php?action=register">Register</a></li>
                             </ul>
                         </div>
                     </div>

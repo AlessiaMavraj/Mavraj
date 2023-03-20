@@ -1,11 +1,11 @@
 <?php
-$title ='Rent A Snow - Login';
+$title = 'Rent A Snow - Login';
 
 ob_start(); //buffer pour enregistrer tout sans afficher temporairement
 ?>
     <h2>Login</h2>
-<?php if (isset($_error)) :?>
-    <h5><span style="color:#000dff">Login refusé</span></h5>
+<?php if (isset($error)) : ?>
+    <h5><span style="color:#ff0000">Login refusé</span></h5>
 <?php endif ?>
     <article>
         <form class='form' method='POST' action="index.php?action=login">
@@ -14,7 +14,7 @@ ob_start(); //buffer pour enregistrer tout sans afficher temporairement
                 <input type="email" placeholder="Enter email address" name="inputUserEmailAddress" required>
 
                 <label for="userPsw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="inputUserPsw" required>
+                <input type="password" placeholder="Enter Password" name  ="inputUserPsw" required>
             </div>
             <div class="container">
                 <button type="submit" class="btn btn-default">Login</button>
