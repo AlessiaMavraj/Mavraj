@@ -4,6 +4,8 @@ require "./model/usersService.php";
 
 $error = null;
 
+//$_SESSION['index.php']=();
+
 function login($userInputLoginData)
 {
     if(isset($userInputLoginData['inputUserEmailAddress'])){
@@ -18,8 +20,6 @@ function login($userInputLoginData)
 
     }
 }
-
-
 function logout(){
-
+//insérer fonction ici :) o ka ou
 }
