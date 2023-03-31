@@ -15,6 +15,7 @@ function getSnows(){
 
 function getSnow($code)
 {
-    $snowQuery = 'SELECT code, brand, model, snowLength, dailyPrice, qtyAvailable, description, photo FROM snows WHERE code='.SEPARATOR.$code.SEPARATOR.'AND active=1';
+    $separator = '\'';
+    $snowQuery = 'SELECT code, brand, snowLength, dailyPrice, qtyAvailable, description, photo FROM snows WHERE code='.$separator.$code.$separator.'AND active=1';
     return executeQuerySelect($snowQuery);
 }

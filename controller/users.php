@@ -4,22 +4,35 @@ require "./model/usersService.php";
 
 $error = null;
 
-//$_SESSION['index.php']=();
-
-function login($userInputLoginData)
-{
+function login($userInputLoginData):void{
     if(isset($userInputLoginData['inputUserEmailAddress'])){
-        if(false){
+        if(isLoginCorrect($userInputLoginData['inputUserEmailAddress'], $userInputLoginData['inputUserPsw'])) {
+            $_SESSION['userEmailAddress'] = $userInputLoginData['inputUserEmailAddress'];
+            snows();
         }else{
             $error = "Erreur de login";
             require "view/login.php";
         }
-
     }else{
         require "view/login.php";
-
     }
 }
-function logout(){
-//insérer fonction ici :) o ka ou
+
+function logout():void{
+    $_SESSION = array();
+    session_destroy();
+    require "view/home.php";
+}
+
+function register($userInputRegisterData):void{
+    if(isset($userInputRegisterData['inputUserEmailAddress'])){
+        if(isRegistrationCorrect($userInputRegisterData['inputUserEmailAddress'],$userInputRegisterData['inputUserPwd'])) {
+            login($userInputRegisterData);
+        }else{
+            $error = "registration not possible";
+            require "view/register.php";
+        }
+    }else{
+        require "view/register.php";
+    }
 }
